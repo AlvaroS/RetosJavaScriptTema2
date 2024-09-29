@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo del volumen de una esfera</title>
+</head>
+<body>
+<script>
+
+    let radio = 5;  
+    
+    // Definición de la función 'volumen' para calcular el volumen de una esfera dado su radio
+
+    function volumen (radio) {
+        return (4/3) * Math.PI * Math.pow(radio, 3);
+    } 
+    
+    // Muestra el volumen de la esfera en la consola
+    console.log('El volumen de la esfera con radio ' + radio + ' es: ' + volumen(radio) + ' cm cúbicos.');
+</script>
+
+<script>
+    // Calcula y muestra el volumen de la esfera directamente en la consola
+    console.log('El volumen de la esfera es: ' + ((4/3) * Math.PI * Math.pow(radio, 3)) + ' cm cúbicos.');
+</script>
+</body>
+</html>

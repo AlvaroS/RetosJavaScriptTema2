@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculos Geométricos</title>
+    <script src="u1e5_geometría.js"></script>
+</head>
+<body>
+
+<script>
+    let base = 10;
+    let altura = 5;
+    let lado1 = 3;
+    let lado2 = 4;
+    let lado3 = 5;
+    let radio = 7;
+
+
+    function perimetroTriangulo(lado1, lado2, lado3) {
+        if (arguments.length === 1) {
+            // Si se proporciona un solo lado, se asume que es un triángulo equilátero
+            console.log("Perímetro del triángulo equilátero (un solo lado): " + lado1);
+            console.log("Resultado: " + perimetroTrianguloEquilatero(lado1)); // Calcula el perímetro del triángulo equilátero
+        } else if (arguments.length === 2) {
+            // Si se proporcionan dos lados, se asume que es un triángulo isósceles
+            console.log("Perímetro del triángulo isósceles (dos lados): " + lado1 + ", " + lado2);
+            console.log("Resultado: " + perimetroTrianguloIsosceles(lado1, lado2)); // Calcula el perímetro del triángulo isósceles
+        } else if (arguments.length === 3) {
+            // Si se proporcionan tres lados, se asume que es un triángulo escaleno
+            console.log("Perímetro del triángulo escaleno (tres lados): " + lado1 + ", " + lado2 + ", " + lado3);
+            console.log("Resultado: " + perimetroTrianguloEscaleno(lado1, lado2, lado3)); // Calcula el perímetro del triángulo escaleno
+        } else {
+            // En caso de que el número de parámetros no sea entre 1 y 3, muestra un mensaje de error
+            console.log("Error: Debes proporcionar entre 1 y 3 parámetros.");
+        }
+    }
+
+
+    function perimetroParalelogramo(lado1, lado2) {
+        if (arguments.length === 1) {
+            // Si se proporciona un solo lado, se asume que es un cuadrado
+            console.log("Perímetro del cuadrado (un solo lado): " + lado1);
+            console.log("Resultado: " + perimetroCuadrado(lado1)); // Calcula el perímetro del cuadrado
+        } else if (arguments.length === 2) {
+            // Si se proporcionan dos lados, se asume que es un rectángulo
+            console.log("Perímetro del rectángulo (dos lados): " + lado1 + ", " + lado2);
+            console.log("Resultado: " + perimetroRectangulo(lado1, lado2)); // Calcula el perímetro del rectángulo
+        } else {
+            // En caso de que el número de parámetros no sea 1 o 2, muestra un mensaje de error
+            console.log("Error: Debes proporcionar 1 o 2 parámetros.");
+        }
+    }
+
+
+
+    console.log("Área del triángulo: " + areaTriangulo(base, altura));
+    
+  
+    perimetroTriangulo(lado1);
+    perimetroTriangulo(lado1, lado2); 
+    perimetroTriangulo(lado1, lado2, lado3);
+
+   
+    perimetroParalelogramo(lado1); 
+    perimetroParalelogramo(lado1, lado2); 
+
+    console.log("Área del cuadrado: " + areaCuadrado(lado1));
+    console.log("Área del rectángulo: " + areaRectangulo(lado1, lado2));
+    console.log("Área del círculo: " + areaCirculo(radio));
+    console.log("Longitud de la circunferencia: " + longitudCircunferencia(radio));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function mostrarNumeros() {
+            for (let i = 1; i <= 100; i++) {
+                // Verifica si el número no es divisible por 3
+                if (i % 3 !== 0) {
+                    // Escribe el número en la página
+                    document.write(i + " ");
+                }
+            }
+        }
+
+        mostrarNumeros();
+
+
+        function mostrarMeses() {
+            // Definición de un array con algunos meses
+            let meses = ["enero", "febrero", "marzo", "abril", "mayo", "septiembre", "octubre", "noviembre", "diciembre"];
+            // Itera sobre el array de meses y muestra cada uno en la página
+            meses.forEach(mes => {
+                document.write(mes + " ");
+            });
+        }
+
+        // Llama a la función para mostrar los meses
+        mostrarMeses();
+    </script>
+</body>
+</html>

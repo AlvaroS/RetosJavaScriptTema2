@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function mostrarHoras(){
+            let hora = 15;
+            let minutos = 0;
+
+            while (hora < 17 || (hora === 16 && minutos <= 30)){
+
+                const horaFormateada = hora.toString().padStart(2, "0");
+                const minutosFormateados = minutos.toString().padStart(2, "0");
+
+                document.write(`${horaFormateada}:${minutosFormateados}` + " ");
+
+                minutos += 15;
+
+                if (minutos === 60){
+                    minutos = 0;
+                    hora ++;
+                }
+            }
+
+        }
+
+       mostrarHoras();
+    </script>
+</body>
+</html>

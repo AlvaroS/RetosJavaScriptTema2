@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculos Geométricos</title>
+    <!-- Importamos el archivo -->
+    <script src="u1e5_geometría.js"></script>
+</head>
+<body>
+
+<script>
+    let base = 10;
+    let altura = 5;
+    let lado1 = 3;
+    let lado2 = 4;
+    let lado3 = 5;
+    let radio = 7;
+
+    let areaTriangulo = (base, altura) => {
+    return (base * altura) / 2;
+}
+
+let perimetroTrianguloEquilatero = lado => {
+    return 3 * lado;
+}
+
+let perimetroTrianguloIsosceles = (lado1, lado2) => {
+    return 2 * lado1 + lado2;
+}
+
+let perimetroTrianguloEscaleno = (lado1, lado2, lado3) => {
+    return lado1 + lado2 + lado3;
+}
+
+let  areaCuadrado = lado => {
+    return lado * lado;
+}
+
+let perimetroCuadrado = lado => {
+    return 4 * lado;
+}
+
+let areaRectangulo = (lado1, lado2) => {
+    return lado1 * lado2;
+}
+
+let perimetroRectangulo = (lado1, lado2) => {
+    return 2 * (lado1 + lado2);
+}
+
+let areaCirculo = radio => {
+    return Math.PI * Math.pow(radio, 2);
+}
+
+let longitudCircunferencia = radio => {
+    return 2 * Math.PI * radio;
+}
+</script>
+<script>
+        console.log("Área del triángulo: " + areaTriangulo(base, altura));
+        console.log("Perímetro del triángulo equilátero: " + perimetroTrianguloEquilatero(lado1));
+        console.log("Perímetro del triángulo isósceles: " + perimetroTrianguloIsosceles(lado1, lado2));
+        console.log("Perímetro del triángulo escaleno: " + perimetroTrianguloEscaleno(lado1, lado2, lado3));
+
+        console.log("Área del cuadrado: " + areaCuadrado(lado1));
+        console.log("Perímetro del cuadrado: " + perimetroCuadrado(lado1));
+
+        console.log("Área del rectángulo: " + areaRectangulo(lado1, lado2));
+        console.log("Perímetro del rectángulo: " + perimetroRectangulo(lado1, lado2));
+
+        (function(radio){ console.log("La longitud de la circunferencia es igual a " + 2 * Math.PI * radio)})(7);
+
+        (function(radio){ console.log("La longitud de la circunferencia es igual a " + 2 * Math.PI * radio)})(7);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar</title>
+</head>
+<body>
+
+<script>
+
+var y = prompt('INTRODUZCA NÚMERO');
+
+// Convierte la entrada del usuario a un número entero
+y = parseInt(y);
+
+// Bucle para calcular la tabla de multiplicar del número introducido
+for (var x = 1; x <= 10; x++) {
+    // Calcula el resultado de la multiplicación
+    var r = y * x;
+
+    // Muestra el resultado de la multiplicación en la página
+    document.write(y + " x " + x + " = " + r + "<br>");
+}
+</script>
+
+</body>
+</html>

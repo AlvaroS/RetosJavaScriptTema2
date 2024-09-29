@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function trivia(){
+
+        let respuesta1 = prompt("¿Cúal es la capital de España?");
+        let respuesta2 = prompt("¿Cuánto duró la Guerra de los Cien Años?");
+        let respuesta3 = prompt("¿Cúantas Champions tiene el Real Madrid?");
+        let respuesta4 = prompt("¿Quien desarrolló la fórmula de la relatividad?");
+        let respuesta5 = prompt("¿Quienes fundaron la ciudad de Roma?");
+        let respuesta6 = prompt("¿Cuál es el río más caudaloso del mundo?");
+        
+        let contadorError = 0;
+        let contadorCorrecto = 0;
+
+            while (contadorCorrecto != 4){
+
+                if(respuesta1 === "Madrid"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+                if(respuesta2 === "116"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+                if(respuesta3 === "16"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+                if(respuesta4 === "Albert Einstein"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+                if(respuesta5 === "Rómulo y Remo"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+                if(respuesta6 === "Amazonas"){
+                    contadorCorrecto++;
+                } else {
+                    contadorError++;
+                }
+
+            }
+            
+            if(contadorCorrecto === 4) {
+                alert("Felicidades! Has acertado 4, has ganado!");
+                    } else if (contadorError === 3){
+                        alert("Has fallado 3 preguntas, inténtalo de nuevo");
+                    }
+            
+        }
+
+        trivia();
+    </script>
+</body>
+</html>

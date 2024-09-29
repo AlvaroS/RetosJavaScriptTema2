@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       alert("Empieza el juego")
+       let pregunta1 = prompt("¿Se puede borrar con antivirus?  1)Sí  2)No");
+
+    if (pregunta1 == 1){
+
+       let pregunta2 = prompt("¿Se multiplica?  1)Sí  2)No");
+
+       if (pregunta2 == 1) {
+
+        alert("¡El virus es un gusano!");
+
+       }else{
+
+        alert("¡El virus es un troyano!");
+       }
+
+    } else if(pregunta1 == 2){
+
+        let pregunta3 = prompt("¿Se soluciona con actualizar el sistema? 1)Sí 2)No");
+
+        if (pregunta3 == 1){
+
+            let pregunta4 = prompt("¿puede ser un error en el sistema? 1)Sí 2)No");
+
+            if (pregunta4 ==1){
+
+                alert("El virus es un bug")
+
+            }else{
+
+                alert("El virus es un exploit")
+            }
+        } else {
+
+            alert("¡Es spam!")
+        }
+    } else {
+
+        alert("Opción equivocada, elige 1 o 2")
+    }
+    </script>
+</body>
+</html>

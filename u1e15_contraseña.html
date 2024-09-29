@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function crearContraseña(){
+                let contrasena = prompt("Escribe una contraseña válida: ")
+                let requisitos = 0;
+
+                if (contrasena.length >= 8){
+                    requisitos++;
+                }
+
+                if (/[A-Z]/.test(contrasena)) {
+                    requisitos++;
+                }
+
+                if(/[a-z]/.test(contrasena)){
+                    requisitos++;
+                }
+                if(/[0-9]/.test(contrasena)){
+                    requisitos++;
+                }
+                if(/[-_=@*$#]/.test(contrasena)){
+                    requisitos++;
+                }
+
+                if ( requisitos === 5){
+                    alert("Contraseña segura");
+
+                } else if ( requisitos >= 3 && requisitos < 5){
+                    alert("Contraseña poco segura");
+
+                } else {
+                    alert("contraseña débil.")
+                }
+            }
+        crearContraseña();
+    </script>
+</body>
+</html>

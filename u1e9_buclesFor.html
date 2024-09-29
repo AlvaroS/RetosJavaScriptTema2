@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+</head>
+<body>
+
+    <script>
+        
+        function mostrarHoras() {
+            let hora = 8; 
+            let minutos = 0; 
+
+            // Bucle que se ejecuta mientras la hora sea menor que 21 o hasta las 20:30
+            while (hora < 21 || (hora === 20 && minutos <= 30)) {
+                // Formatea la hora y los minutos para asegurarse de que siempre tienen dos dígitos
+                const horaFormateada = hora.toString().padStart(2, '0');
+                const minutosFormateados = minutos.toString().padStart(2, '0');
+                
+                // Imprime la hora en formato "HH:MM" en la consola
+                console.log(`${horaFormateada}:${minutosFormateados}`);
+                
+                // Incrementa los minutos en 30
+                minutos += 30;
+                
+                // Si los minutos llegan a 60, los resetea a 0 y aumenta la hora en 1
+                if (minutos === 60) {
+                    minutos = 0;
+                    hora++;
+                }
+            }
+        }
+
+        // Llama a la función `mostrarHoras` cuando la ventana se carga
+        window.onload = mostrarHoras;
+    </script>
+
+</body>
+</html>
+
+
